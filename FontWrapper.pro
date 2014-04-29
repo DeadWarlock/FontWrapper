@@ -12,10 +12,25 @@ TARGET = QtFontWrapper
 TEMPLATE = app
 
 QMAKE_CXXFLAGS += -std=gnu++11
+#QMAKE_CXXFLAGS += -std=c++11
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+CONFIG += precompile_header
 
-HEADERS  += mainwindow.h
+SOURCES += \
+    main.cpp \
+    mainwindow.cpp \
+    ftengine.cpp
 
-FORMS    += mainwindow.ui
+PRECOMPILED_HEADER += precompile.h
+
+HEADERS += \
+    mainwindow.h \
+    ftengine.h \
+    precompile.h
+
+FORMS += mainwindow.ui
+
+RESOURCES += \
+    res_file.qrc
+
+include(freetype.pri)
