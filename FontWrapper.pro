@@ -30,7 +30,7 @@ HEADERS += \
 
 FORMS += mainwindow.ui
 
-RESOURCES += \
-    res_file.qrc
+#RESOURCES += \
+#    res_file.qrc
 
 include(freetype.pri)
